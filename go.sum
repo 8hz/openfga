@@ -6,6 +6,10 @@ cloud.google.com/go/compute/metadata v0.6.0 h1:A6hENjEsCDtC1k8byVsgwvVcioamEHvZ4
 cloud.google.com/go/compute/metadata v0.6.0/go.mod h1:FjyFAW1MW0C203CEOMDTu3Dk1FlqW3Rga40jzHL4hfg=
 filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
 filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+github.com/8hz/openfga-api v0.0.0-20250812015645-c9393adb6675 h1:/yiZ0jCKYwvhkwo119fuGLXm01/FxPhLiWn4wH+orQA=
+github.com/8hz/openfga-api v0.0.0-20250812015645-c9393adb6675/go.mod h1:bEdBccXLcwQFq4QM1K94+OqSi81afTSK8aeALZTAI4g=
+github.com/8hz/openfga-api/proto v0.0.0-20250812015645-c9393adb6675 h1:l61cP3m6Ru2t9DnJTbxDcei2EbnePVgg8nkGS719a2c=
+github.com/8hz/openfga-api/proto v0.0.0-20250812015645-c9393adb6675/go.mod h1:DZOb1wbcqk/+f7BfR5Fv1kV2C2n5FHIzsD6HsGjK4zg=
 github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 h1:L/gRVlceqvL25UVaW/CKtUDjefjrs0SPonmDGUVOYP0=
 github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161/go.mod h1:xomTg63KZ2rFqZQzSB4Vz2SUXa1BpHTVz9L5PTmPC4E=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=

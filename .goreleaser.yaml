@@ -18,10 +18,10 @@ builds:
       - darwin
     ldflags:
       - "-s -w"
-      - "-X github.com/8hz/openfga/internal/build.Version=v{{ .Version }}"
-      - "-X github.com/8hz/openfga/internal/build.Commit={{.Commit}}"
-      - "-X github.com/8hz/openfga/internal/build.Date={{.Date}}"
-      - "-X github.com/8hz/openfga/internal/build.ProjectName={{.ProjectName}}"
+      - "-X github.com/openfga/openfga/internal/build.Version=v{{ .Version }}"
+      - "-X github.com/openfga/openfga/internal/build.Commit={{.Commit}}"
+      - "-X github.com/openfga/openfga/internal/build.Date={{.Date}}"
+      - "-X github.com/openfga/openfga/internal/build.ProjectName={{.ProjectName}}"
 
 dockers:
   - goos: linux
@@ -34,9 +34,6 @@ dockers:
       - "ghcr.io/8hz/openfga:latest-amd64"
       - "ghcr.io/8hz/openfga:{{ .Tag }}-amd64"
       - "ghcr.io/8hz/openfga:v{{ .Version }}-amd64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}-amd64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}-amd64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}-amd64"
 
     use: buildx
     build_flag_templates:
@@ -55,9 +52,6 @@ dockers:
       - "ghcr.io/8hz/openfga:latest-arm64"
       - "ghcr.io/8hz/openfga:{{ .Tag }}-arm64"
       - "ghcr.io/8hz/openfga:v{{ .Version }}-arm64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}-arm64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}-arm64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}-arm64"
 
     use: buildx
 
@@ -72,22 +66,14 @@ docker_manifests:
     image_templates:
       - "ghcr.io/8hz/openfga:latest-amd64"
       - "ghcr.io/8hz/openfga:latest-arm64"
+  - name_template: ghcr.io/8hz/openfga:{{ .Tag }}
+    image_templates:
+      - "ghcr.io/8hz/openfga:{{ .Tag }}-amd64"
+      - "ghcr.io/8hz/openfga:{{ .Tag }}-arm64"
   - name_template: ghcr.io/8hz/openfga:v{{ .Version }}
     image_templates:
       - "ghcr.io/8hz/openfga:v{{ .Version }}-amd64"
       - "ghcr.io/8hz/openfga:v{{ .Version }}-arm64"
-  - name_template: ghcr.io/8hz/openfga:v{{ .Major }}
-    image_templates:
-      - "ghcr.io/8hz/openfga:v{{ .Major }}-amd64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}-arm64"
-  - name_template: ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}
-    image_templates:
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}-amd64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}-arm64"
-  - name_template: ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}
-    image_templates:
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}-amd64"
-      - "ghcr.io/8hz/openfga:v{{ .Major }}.{{ .Minor }}.{{ .Patch }}-arm64"
 
 release:
   github:
